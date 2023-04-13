@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+    image: apptest
+    ports:
+      - "5000:5000"
+    networks:
+      - bridge
+  db:
+    image: dbtest
+    ports:
+      - "3306:3306"
+    networks:
+      - bridge
+networks:
+  bridge:
+    driver: bridge
+

@@ -1,13 +1,19 @@
 version: '3'
 services:
   app:
-    image: apptest
+    build:  
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: app_container
     ports:
       - "5000:5000"
     networks:
       - bridge
   db:
-    image: dbtest
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    container_name: db_container
     ports:
       - "3306:3306"
     networks:

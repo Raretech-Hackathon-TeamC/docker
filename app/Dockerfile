@@ -14,7 +14,7 @@ WORKDIR /app
 # Install the required Python packages
 # COPY requirements.txt /app/requirements.txt
 RUN pip3 install -r requirements.txt
-RUN apt install -y vim
+
 # Set environment variables for MySQL
 ENV MYSQL_DATABASE=chatapp
 ENV MYSQL_USER=testuser
